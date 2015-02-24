@@ -29,7 +29,7 @@ public class WarpListener implements Listener {
 
               //Cancel the warp if the player moves to a different block
               if (!blockFrom.equals(blockTo)) {
-                RentWarpPlugin.cancelWarp(playerName);
+            	  RentWarpPlugin.cancelWarp(playerName);
                 player.sendMessage(ChatColor.RED + "Warping canceled because you moved!");
               }
             

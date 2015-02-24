@@ -3,7 +3,7 @@ version: 1.0
 description: Economy Warp Plugin
 author: Fahlur
 depend: [Vault]
-main: me.fahlur.rentwarp.RentWarpPlugin
+main: me.fahlur.rentwarp.rentwarp
 commands:
   warp:
     description: Main Command
