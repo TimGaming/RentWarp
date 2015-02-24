@@ -1,4 +1,4 @@
-package me.falhur.rentwarp.RentWarpPlugin;
+package me.falhur.rentwarp;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,6 +1,6 @@
 package me.falhur.rentwarp.Listeners;
 
-import me.falhur.rentwarp.RentWarpPlugin.RentWarpPlugin;
+import me.falhur.rentwarp.RentWarpPlugin;
 
 import org.bukkit.ChatColor;
 import org.bukkit.block.Block;
