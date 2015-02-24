@@ -1,4 +1,4 @@
-package Listeners;
+package me.falhur.rentwarp.Listeners;
 
 import me.falhur.rentwarp.RentWarpPlugin.RentWarpPlugin;
 

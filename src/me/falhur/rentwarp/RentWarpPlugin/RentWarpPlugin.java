@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.UUID;
 import java.util.regex.Pattern;
 
+import me.falhur.rentwarp.Listeners.WarpListener;
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.permission.Permission;
 
@@ -25,8 +26,6 @@ import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitTask;
-
-import Listeners.WarpListener;
 
 
 public class RentWarpPlugin extends JavaPlugin {
