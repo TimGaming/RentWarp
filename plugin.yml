@@ -1,0 +1,73 @@
+name: RentWarp
+version: 1.0
+description: Economy Warp Plugin
+author: Fahlur
+depend: [Vault]
+main: me.fahlur.rentwarp.RentWarpPlugin
+commands:
+  warp:
+    description: Main Command
+    aliases: w
+    usage: /warp
+  listcolors:
+    description: List valid colors for greetings
+    aliases: lc
+    usage: /listcolors 
+Permissions:
+  RentWarp.*:
+    description: Gives access to everything
+    children:
+        RentWarp.Player.Help: true
+        RentWarp.Player.List: true
+        RentWarp.Player.Warp: true
+        RentWarp.Player.Info: true
+        RentWarp.Player.Create: true
+        RentWarp.Admin.Reload: true
+        RentWarp.Admin.Delete: true
+        RentWarp.Admin.RentExempt: true
+        RentWarp.Admin.CoolDownExempt: true
+        RentWarp.Admin.Move: true
+        RentWarp.Player.Addtime: true
+  RentWarp.Player.*:
+    description: Gives access to all player features
+    children:
+        RentWarp.Player.Help: true
+        RentWarp.Player.List: true
+        RentWarp.Player.Warp: true
+        RentWarp.Player.Info: true
+        RentWarp.Player.Create: true
+        RentWarp.Player.Delete: true
+        RentWarp.Player.Addtime: true
+  RentWarp.Player.Help:
+    description: Allows you to see the plugins help page
+    default: op
+  RentWarp.Player.List:
+    description: Allows you to list warps
+    default: op
+  RentWarp.Player.Warp:
+    description: Allows you to warp
+    default: op
+  RentWarp.Player.Info:
+    description: Allows you to get information on a warp
+    default: op
+  RentWarp.Player.Create:
+    description: Allows you to create a warp
+    default: op
+  RentWarp.Admin.Reload:
+    description: Allows you to reload the plugin
+    default: op
+  RentWarp.Player.Delete:
+    description: Allows you to delete a warp
+    default: op
+  RentWarp.Admin.Delete:
+    description: Allows you to delete a warp
+    default: op
+  RentWarp.Admin.RentExempt:
+    description: Allows you to exempt a warp from rent
+    default: op  
+  RentWarp.Admin.CoolDownExempt:
+    description: Allows for instant warp
+    default: op  
+  RentWarp.Admin.Move:
+    description: Allows you to move a warp
+    default: op  
