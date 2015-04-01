@@ -1,18 +1,58 @@
 name: RentWarp
-version: 1.0
+version: 1.4.1
 description: Economy Warp Plugin
 author: Fahlur
 depend: [Vault]
 main: me.fahlur.rentwarp.rentwarp
 commands:
-  warp:
-    description: Main Command
-    aliases: w
-    usage: /warp
-  listcolors:
+  colors:
     description: List valid colors for greetings
-    aliases: lc
-    usage: /listcolors 
+    aliases: c
+    usage: /colors 
+  mywarps:
+      description: Lists your warps
+      aliases: myw
+      usage: /mywarps
+  movewarp:
+      description: Move your warp
+      aliases: mw
+      usage: /movewarp
+  setwarp:
+      description: Create your warp
+      aliases: [createwarp,addwarp,rwsetwarp]
+      usage: /setwarp
+  delwarp:
+      description: Delete your warp
+      aliases: [rwdelwarp,remwarp,rwremwarp]
+      usage: /delwarp
+  warpgreet:
+      description: Update your warps greeting
+      aliases: wg
+      usage: /warpgreet 
+  warp:
+      description: Main Command
+      aliases: [rwwarp,w, warps]
+      usage: /warp 
+  warpcost:
+      description: Displays current cost for a warp
+      aliases: wc
+      usage: /warpcost 
+  warpinfo:
+      description: Displays information about a warp
+      aliases: wi
+      usage: /warpinfo 
+  addtime:
+      description: Extends warp time duration
+      aliases: at
+      usage: /addtime 
+  warpexempt:
+      description: Exempts a warp from rent
+      aliases: we
+      usage: /warpexempt 
+  rentwarp:
+      description: Main plugin command
+      aliases: rw
+      usage: /rentwarp 
 Permissions:
   RentWarp.*:
     description: Gives access to everything
@@ -22,12 +62,18 @@ Permissions:
         RentWarp.Player.Warp: true
         RentWarp.Player.Info: true
         RentWarp.Player.Create: true
+        RentWarp.Player.Delete: true
+        RentWarp.Player.Addtime: true
+        RentWarp.Player.Greeting: true
+        RentWarp.Player.rentwarpcommand: true
+        RentWarp.Warp.Exempt: true
         RentWarp.Admin.Reload: true
         RentWarp.Admin.Delete: true
+        RentWarp.Admin.Greet: true
         RentWarp.Admin.RentExempt: true
+        RentWarp.Admin.Addtime: true
         RentWarp.Admin.CoolDownExempt: true
         RentWarp.Admin.Move: true
-        RentWarp.Player.Addtime: true
   RentWarp.Player.*:
     description: Gives access to all player features
     children:
@@ -38,6 +84,11 @@ Permissions:
         RentWarp.Player.Create: true
         RentWarp.Player.Delete: true
         RentWarp.Player.Addtime: true
+        RentWarp.Player.Greeting: true
+        RentWarp.Player.rentwarpcommand: true
+  RentWarp.Warp.Exempt:
+    description: Allows players to be exempt from warp fees
+    default: op
   RentWarp.Player.Help:
     description: Allows you to see the plugins help page
     default: op
